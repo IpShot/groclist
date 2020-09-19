@@ -1,7 +1,12 @@
 import React, { useMemo, useReducer } from 'react'
-import AddEntry from './components/AddEntry'
-import EntriesList from './components/EntriesList'
-import Filters from './components/Filters'
+import { 
+  BrowserRouter as Router, 
+  Switch, 
+  Route, 
+  Redirect 
+} from 'react-router-dom'
+import List from './pages/List'
+import Entry from './pages/Entry'
 import appReducer from './reducers/appReducer'
 import { AppContext } from './contexts'
 import * as actions from './actions'
@@ -36,12 +41,17 @@ export default function App() {
   const context = useMemo(() => [state, appActions], [state, appActions])
   return (
     <AppContext.Provider value={context}>
-      <div className="app">
-        <h1>Groclist</h1>
-        <AddEntry />
-        <Filters />
-        <EntriesList />
-      </div>
+      <Router>
+        <Switch>
+          <Route exact path="/">
+            <List />
+          </Route>
+          <Route path="/entry/:id" children={<Entry />} /> 
+          <Route path="*">
+            <Redirect to="/" />
+          </Route>
+        </Switch>
+      </Router>
     </AppContext.Provider>
   )
 }
