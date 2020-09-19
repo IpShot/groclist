@@ -14,21 +14,18 @@ function getFilteredEntries(entries, filter) {
 }
 
 export default function EntriesList() {
-  const [{ entries, filter }, { toggleEntry, removeEntry }] = useContext(AppContext)
+  const [{ entries, filter }] = useContext(AppContext)
   const filteredEntries = getFilteredEntries(entries, filter)
 
   return (
     <ul className="entries">
       {filteredEntries && filteredEntries.length
         ? filteredEntries.map(entry =>
-            <Entry
-              key={`entry-${entry.id}`}
-              entry={entry}
-              onToggle={toggleEntry}
-              onRemove={removeEntry}
-            />
+            <li key={`entry-${entry.id}`}>
+              <Entry entry={entry} />
+            </li>
           )
-        : "No entries"}
+        : 'No entries'}
     </ul>
   )
 }
