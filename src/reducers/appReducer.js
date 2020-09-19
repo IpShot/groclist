@@ -12,7 +12,8 @@ export default function reducer(state, action) {
           [id]: {
             content,
             priority,
-            have: state.filter !== FILTER.RAN_OUT
+            have: state.filter !== FILTER.RAN_OUT,
+            history: []
           }
         }
       }
@@ -25,7 +26,11 @@ export default function reducer(state, action) {
           ...state.entries,
           [id]: {
             ...state.entries[id],
-            have: !state.entries[id].have
+            have: !state.entries[id].have,
+            history: [
+              ...state.entries[id].history,
+              new Date()
+            ]
           }
         }
       }
