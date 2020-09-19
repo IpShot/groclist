@@ -7,7 +7,7 @@ import { AppContext } from '../contexts'
 export default function EntryPage() {
   const { id } = useParams()
   const [{ entries }] = useContext(AppContext)
-  const entry = entries[id]
+  const entry = entries[id] ? { ...entries[id], id } : null
   return entry ? (
     <>
       <h1>Entry</h1>
