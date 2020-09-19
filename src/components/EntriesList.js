@@ -18,7 +18,7 @@ export default function EntriesList() {
   const filteredEntries = getFilteredEntries(entries, filter)
 
   return (
-    <ul className="entries-list">
+    <ul className="entries">
       {filteredEntries && filteredEntries.length
         ? filteredEntries.map(entry =>
             <Entry

@@ -12,10 +12,11 @@
   cursor: pointer;
 }
 
-.entry-list {
+.entries {
   margin-top: 1rem;
   text-align: left;
   list-style: none;
+  padding-left: 0.3rem;
 }
 
 .entry-item {
@@ -27,6 +28,10 @@
 .entry-item__text--have {
   text-decoration: line-through;
   color: lightgray;
+}
+
+.filters {
+  margin-top: 1rem;
 }
 
 .filter {
