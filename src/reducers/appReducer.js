@@ -32,12 +32,9 @@ export default function reducer(state, action) {
     }
     case REMOVE_ENTRY: {
       const { id } = action.payload
-      return {
-        ...state,
-        entries: {
-          ...state.entries,
-          [id]: undefined
-        }
+      delete state.entries[id]
+      return { 
+        ...state 
       }
     }
     case SET_FILTER: {
