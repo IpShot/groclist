@@ -1,5 +1,5 @@
-import { FILTER } from './constants'
-import { ADD_ENTRY, TOGGLE_ENTRY, REMOVE_ENTRY, SET_FILTER } from './actions'
+import { FILTER } from '../constants'
+import { ADD_ENTRY, TOGGLE_ENTRY, REMOVE_ENTRY, SET_FILTER } from '../actions'
 
 export default function reducer(state, action) {
   switch (action.type) {
