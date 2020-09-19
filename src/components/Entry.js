@@ -5,7 +5,7 @@ const Entry = ({ entry, onToggle, onRemove }) => (
     <span onClick={() => onToggle(entry.id)}>
       {entry.content} {entry.priority} {entry && entry.have ? 'have' : 'ran out'}
     </span>
-    <button onClick={() => onRemove(entry.id)}>x</button>
+    <button className="remove-entry" onClick={() => onRemove(entry.id)}>x</button>
   </li>
 )
 

@@ -1,0 +1,40 @@
+.app {
+  font-family: sans-serif;
+}
+
+.add-entry {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.remove-entry {
+  margin-left: 0.5rem;
+  cursor: pointer;
+}
+
+.entry-list {
+  margin-top: 1rem;
+  text-align: left;
+  list-style: none;
+}
+
+.entry-item {
+  margin-top: 0.5rem;
+  font-family: monospace;
+  cursor: pointer;
+  line-height: 1.5;
+}
+.entry-item__text--have {
+  text-decoration: line-through;
+  color: lightgray;
+}
+
+.filter {
+  padding: 0.3rem 0;
+  margin: 0 0.3rem;
+  cursor: pointer;
+}
+
+.filter--active {
+  border-bottom: 1px solid black;
+}
