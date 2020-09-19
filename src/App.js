@@ -39,8 +39,8 @@ export default function App() {
       <div className="app">
         <h1>Groclist</h1>
         <AddEntry />
-        <EntriesList />
         <Filters />
+        <EntriesList />
       </div>
     </AppContext.Provider>
   )
