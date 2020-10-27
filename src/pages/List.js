@@ -6,7 +6,7 @@ import Filters from '../components/Filters'
 export default function ListPage() {
   return (
     <>
-      <h1>Groclist</h1>
+      <h1>Super Puper Groclist</h1>
       <AddEntry />
       <Filters />
       <EntriesList />
